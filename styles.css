@@ -71,6 +71,9 @@ main {
 }
 
 .hero-image {
+    justify-self: end;
+    width: 100%;
+    max-width: 430px;
     margin: 0;
     padding: 0.85rem;
     background: #ffffff;
@@ -82,9 +85,206 @@ main {
 .hero-image img {
     display: block;
     width: 100%;
+    max-height: 440px;
     aspect-ratio: 1;
     object-fit: cover;
     border-radius: 10px;
+}
+
+.language-search-section {
+    margin: 0 0 3rem;
+    padding: 2.5rem;
+    background: #ffffff;
+    border: 1px solid #d8ded9;
+    border-radius: 18px;
+    box-shadow: 0 12px 30px rgba(20, 52, 44, 0.08);
+}
+
+.search-heading {
+    margin-bottom: 1.5rem;
+}
+
+.search-heading h2 {
+    margin-bottom: 0;
+    color: #000101;
+}
+
+.search-controls {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr 1fr;
+    gap: 0.8rem;
+    align-items: end;
+}
+
+.search-controls label {
+    display: block;
+    color: #1b127b;
+    font-family: Arial, sans-serif;
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.search-controls input,
+.search-controls select {
+    width: 100%;
+    padding: 0.8rem 0.9rem;
+    color: #333;
+    background: #f4f4f9;
+    border: 1px solid #c9d2cd;
+    border-radius: 6px;
+    font: inherit;
+}
+
+.search-controls input:focus,
+.search-controls select:focus {
+    outline: 3px solid rgba(31, 90, 72, 0.2);
+    border-color: #1f5a48;
+}
+
+.language-results {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.result-card {
+    padding: 1.25rem;
+    background: #f4f4f9;
+    border-left: 4px solid #1f5a48;
+}
+
+.result-card span {
+    color: #1f5a48;
+    font-family: Arial, sans-serif;
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.result-card h3 {
+    margin: 0.35rem 0;
+    color: #123b31;
+    font-size: 1.35rem;
+}
+
+.result-card p {
+    color: #5f6c67;
+    font-size: 0.92rem;
+}
+
+.listen-button {
+    padding: 0.55rem 0.9rem;
+    color: #ffffff;
+    background: #1f5a48;
+    border: 0;
+    border-radius: 999px;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+    font-weight: 700;
+}
+
+.listen-button:hover,
+.listen-button:focus-visible {
+    background: #c0b9ae;
+    color: #123b31;
+}
+
+.empty-results {
+    grid-column: 1 / -1;
+    padding: 1.5rem;
+    text-align: center;
+    color: #5f6c67;
+    background: #f4f4f9;
+}
+
+.dictionary-note {
+    margin: 1.25rem 0 0;
+    color: #5f6c67;
+    font-size: 0.85rem;
+}
+
+.language-overview {
+    padding: 2.5rem;
+    background: #ffffff;
+    border: 1px solid #d8ded9;
+    border-radius: 18px;
+    box-shadow: 0 12px 30px rgba(20, 52, 44, 0.08);
+}
+
+.language-overview h2 {
+    color: #123b31;
+}
+
+.language-profile {
+    margin-top: 1.5rem;
+    padding: 1.25rem;
+    background: #f4f4f9;
+    border-left: 4px solid #d99b3e;
+}
+
+.language-profile h3 {
+    margin-top: 0;
+    color: #123b31;
+}
+
+.language-profile p {
+    margin-bottom: 0;
+    color: #5f6c67;
+}
+
+.button {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 0.75rem 1.15rem;
+    color: #ffffff;
+    background: #1f5a48;
+    border-radius: 999px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.button:hover,
+.button:focus-visible {
+    background: #d99b3e;
+    color: #123b31;
+}
+
+.about-page {
+    padding: 2.5rem;
+    background: #ffffff;
+    border: 1px solid #d8ded9;
+    border-radius: 18px;
+    box-shadow: 0 12px 30px rgba(20, 52, 44, 0.08);
+}
+
+.about-page h2 {
+    color: #123b31;
+}
+
+.about-goals {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.about-goals article {
+    padding: 1.25rem;
+    background: #f4f4f9;
+    border-left: 4px solid #1f5a48;
+}
+
+.about-goals h3 {
+    color: #123b31;
+}
+
+.about-goals p {
+    margin-bottom: 0;
+    color: #5f6c67;
 }
 
 footer {
@@ -104,5 +304,20 @@ footer {
     .hero-image {
         max-width: 480px;
         margin: 0 auto;
+    }
+
+    .search-controls,
+    .language-results {
+        grid-template-columns: 1fr;
+    }
+
+    .language-search-section,
+    .language-overview,
+    .about-page {
+        padding: 1.5rem;
+    }
+
+    .about-goals {
+        grid-template-columns: 1fr;
     }
 }

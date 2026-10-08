@@ -7,11 +7,11 @@
 <body>
 	<header>
 		<h1>Preserving Sierra Leonean Languages</h1>
-		<nav>
+		<nav aria-label="Main navigation">
 			<ul>
 				<li><a href="index.html">Home</a></li>
-				<li><a href="#about">About</a></li>
-				<li><a href="#languages">Languages</a></li>
+				<li><a href="languages.html">Languages</a></li>
+				<li><a href="about.html">About</a></li>
 			</ul>
 		</nav>
 	</header>
@@ -28,15 +28,36 @@
 			</figure>
 		</section>
 
+		<section class="language-search-section" aria-labelledby="search-title">
+			<div class="search-heading">
+				<p class="eyebrow">Explore the language directory</p>
+				<h2 id="search-title">Search a language</h2>
+			</div>
+			<div class="search-controls">
+				<label for="language-search">Search a word or phrase</label>
+				<input id="language-search" type="search" placeholder="Try hello, friend, or thank you" autocomplete="off">
+				<label for="language-select">Choose a language</label>
+				<select id="language-select">
+					<option value="all">All featured languages</option>
+					<option value="Krio">Krio</option>
+					<option value="Limba">Limba</option>
+					<option value="Temne">Temne</option>
+				</select>
+			</div>
+			<div id="language-results" class="language-results" aria-live="polite"></div>
+			<p class="dictionary-note">The words shown are prototype samples. Confirm the final translations and pronunciation with approved sources before submitting.</p>
+		</section>
+	<script src="app.js"></script>
+
 		<section id="about">
-			<h2>About the Project</h2>
+			<h2>About this Website</h2>
 			<p>This application is dedicated to celebrating, preserving, and providing learning resources for native languages spoken across Sierra Leone.</p>
 		</section>
 
 		<section id="languages">
 			<h2>Featured Languages</h2>
 			<ul>
-				<li><strong>Krio:</strong> The widely spoken English-based creole that serves as a common lingua franca throughout Sierra Leone.</li>
+				<li><strong>Krio:</strong> The widely spoken English-based creole that serves as a common language throughout Sierra Leone, it's usually considered as our mother tongue.</li>
 				<li><strong>Limba:</strong> One of the oldest indigenous languages of Sierra Leone, primary to the northern region.</li>
 				<li><strong>Temne:</strong> A major language widely spoken across the Northern Province and the Western Area.</li>
 			</ul>
