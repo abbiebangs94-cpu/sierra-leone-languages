@@ -127,7 +127,8 @@ main {
 }
 
 .search-controls input,
-.search-controls select {
+.search-controls select,
+.pronunciation-controls select {
     width: 100%;
     padding: 0.8rem 0.9rem;
     color: #333;
@@ -138,9 +139,32 @@ main {
 }
 
 .search-controls input:focus,
-.search-controls select:focus {
+.search-controls select:focus,
+.pronunciation-controls select:focus {
     outline: 3px solid rgba(31, 90, 72, 0.2);
     border-color: #1f5a48;
+}
+
+.pronunciation-controls {
+    display: grid;
+    grid-template-columns: max-content minmax(14rem, 22rem);
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+.pronunciation-controls label {
+    color: #1b127b;
+    font-family: Arial, sans-serif;
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.pronunciation-status {
+    margin: 0.5rem 0 0;
+    color: #5f6c67;
+    font-size: 0.85rem;
 }
 
 .language-results {
@@ -307,6 +331,7 @@ footer {
     }
 
     .search-controls,
+    .pronunciation-controls,
     .language-results {
         grid-template-columns: 1fr;
     }
